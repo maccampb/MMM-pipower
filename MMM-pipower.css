@@ -1,0 +1,61 @@
+/* MMM-pipower.css — V1.0 — ckmmconsulting */
+
+.pipower-wrapper {
+    font-family: inherit;
+    padding: 0;
+}
+
+/* Key/value table */
+.pipower-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pipower-table tr {
+    line-height: 1.6em;
+}
+
+/* Label column — left-aligned, fixed width, slightly dimmed */
+.pipower-label {
+    text-align: left;
+    padding-right: 1em;
+    white-space: nowrap;
+    min-width: 8em;
+    opacity: 0.7;
+}
+
+/* Value column — left-aligned */
+.pipower-value {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Status colour indicators */
+.pipower-green {
+    color: #4CAF50;
+}
+
+.pipower-amber {
+    color: #FF9800;
+}
+
+.pipower-red {
+    color: #F44336;
+}
+
+/* Last updated timestamp */
+.pipower-updated {
+    margin-top: 0.5em;
+    text-align: right;
+    opacity: 0.45;
+}
+
+/* Loading / error states */
+.pipower-loading {
+    padding: 0.5em 0;
+}
+
+.pipower-error {
+    color: #F44336;
+    padding: 0.5em 0;
+}
