@@ -2,11 +2,11 @@
  * MMM-pipower
  * MagicMirror² module — displays pipower RTC schedule status.
  *
- * Version: V1.0
+ * Version: V1.1
  * Author:  ckmmconsulting
  *
  * Changelog:
- *   V1.0 - Initial release. Displays wake time, sleep time, enabled state,
+ *   V1.1 - Initial release. Displays wake time, sleep time, enabled state,
  *          tested status, next shutdown, RTC alarm, and timezone. Polls
  *          pipower status every 30 seconds via node_helper shell exec.
  *          Colour-coded status indicators (green/amber/red).

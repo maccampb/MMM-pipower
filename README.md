@@ -93,4 +93,5 @@ journalctl -u MagicMirror -n 50
 
 | Version | Date | Notes |
 |---------|------|-------|
+| V1.1 | 2026-04-18 | BUGFIX: Next shutdown showed "Not scheduled" when timer active — node_helper now falls back to configured sleep_time with "(scheduled)" when pipower status does not emit the Next shutdown line. |
 | V1.0 | 2026-04-16 | Initial release |

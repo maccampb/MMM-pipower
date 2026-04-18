@@ -144,9 +144,14 @@ module.exports = NodeHelper.create({
         else if (/pending/i.test(testedLine)) tested = "pending";
         else                              tested = false;
 
-        // --- Next shutdown: "2026-04-16 22:00:00 EDT" (optional line) ---
-        // Only present when the shutdown timer is active
-        const nextShutdown = extract(/Next shutdown:\s+(.+)/, null);
+        // --- Next shutdown ---
+        // pipower status only emits "Next shutdown:" when systemd has computed
+        // the next elapse time. Fall back to showing the configured sleep_time
+        // when the timer is active but the line is absent (e.g. shortly after boot).
+        let nextShutdown = extract(/Next shutdown:\s+(.+)/, null);
+        if (!nextShutdown && enabled) {
+            nextShutdown = `${sleepTime} (scheduled)`;
+        }
 
         // --- RTC alarm: datetime string or "not set..." ---
         const rtcRaw     = extract(/RTC alarm:\s+(.+)/);
