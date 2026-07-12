@@ -95,3 +95,12 @@ journalctl -u MagicMirror -n 50
 |---------|------|-------|
 | V1.1 | 2026-04-18 | BUGFIX: Next shutdown showed "Not scheduled" when timer active — node_helper now falls back to configured sleep_time with "(scheduled)" when pipower status does not emit the Next shutdown line. |
 | V1.0 | 2026-04-16 | Initial release |
+
+## Deployment History
+
+Operational events — not code changes, tracked here since the deployed copy
+on a device can drift from this repo without a version bump.
+
+| Date | Host | Notes |
+|------|------|-------|
+| 2026-07-12 | magicm.local | The deployed `MMM-pipower.js` had drifted from this repo: `defaults.updateInterval` had been hand-edited to `60 * 60 * 1000` with the trailing comma dropped, causing a `SyntaxError` on module load (`mm` crash-looped with "Could not validate main module js file"). Redeployed clean from GitHub (`main`, matching this repo exactly — no code change was needed here) and restarted `mm` via pm2. Confirmed loading cleanly with `pipower status` parsed successfully. |
