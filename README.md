@@ -3,7 +3,7 @@
 **Version:** V1.0  
 **Author:** ckmmconsulting
 
-This is aMagicMirror² module that displays the current pipower RTC schedule status on
+This is a MagicMirror² module that displays the current pipower RTC schedule status on
 the mirror, polling for updates every 30 seconds. This is targeted to run on an Raspberry Pi5 with built-in RTC and a battery backup.
 
 ## What it shows
